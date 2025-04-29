@@ -11,4 +11,4 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Botni ishga tushirish komandasi
-CMD ["python", "main.py"]
+CMD ["python", "src/main.py"]
