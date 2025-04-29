@@ -126,14 +126,11 @@ async def show_stats(update: Update, context: ContextTypes.DEFAULT_TYPE, via_cal
     learned_phrases = len(memory)
 
     msg = (
-        f"📊 <b>Statistika</b>:
-"
-        f"👤 Foydalanuvchilar: <b>{users_count}</b>
-"
-        f"👥 Guruhlar: <b>{groups_count}</b>
-"
-        f"🧠 Yodlangan so‘zlar: <b>{learned_phrases}</b>"
-    )
+    f"📊 <b>Statistika</b>:\n"
+    f"👤 Foydalanuvchilar: <b>{users_count}</b>\n"
+    f"👥 Guruhlar: <b>{groups_count}</b>\n"
+    f"🧠 Yodlangan so‘zlar: <b>{learned_phrases}</b>"
+)
     if via_callback:
         await update.callback_query.message.reply_text(msg, parse_mode="HTML")
     else:
